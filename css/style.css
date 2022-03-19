@@ -265,7 +265,7 @@ h6 {
   padding: 8px;
   text-decoration: none;
   display: inline-block;
-  color: rgba(202, 206, 221, 0.6);/*0.8*/
+  color: rgba(202, 206, 221, 0.8);
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -665,7 +665,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(13, 20, 41, 0.6);/*0.8*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1026,7 +1026,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue .venue-info:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(13, 20, 41, 0.6);/*0.8*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1174,24 +1174,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 # supporters Section
 --------------------------------------------------------------*/
 
-#AIBSD_series {
-  padding: 60px 0; 
-
-  /* background: url("../img/venue1.jpg");
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding: 60px 0 40px 0; */
+#supporters {
+  padding: 60px 0;
 }
 
-#AIBSD_series .supporters-wrap {
+#supporters .supporters-wrap {
   border-top: 1px solid #e0e5fa;
   border-left: 1px solid #e0e5fa;
   margin-bottom: 30px;
 }
 
-#AIBSD_series .supporter-logo {
+#supporters .supporter-logo {
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1205,17 +1198,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-right: 1px solid #e0e5fa;
   border-bottom: 1px solid #e0e5fa;
   overflow: hidden;
-  background: rgba(255, 255, 255, 1);
-  /*background: rgba(127, 127, 127, 0.5); */
+  background: rgba(255, 255, 255, 0.5);
   height: 160px;
 }
 
-#AIBSD_series .supporter-logo:hover img {
+#supporters .supporter-logo:hover img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-#AIBSD_series img {
+#supporters img {
   transition: all 0.4s ease-in-out;
 }
 
