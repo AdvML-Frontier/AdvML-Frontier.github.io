@@ -105,13 +105,13 @@
             <p style="font-size: 20px";>Adversarial machine learning, which aims at tricking ML models by providing deceptive inputs, has been identified as a powerful method to improve various trustworthiness metrics (e.g., adversarial robustness, explainability, and fairness) and to advance versatile ML paradigms (e.g., supervised and self-supervised learning, and static and continual learning). As a consequence of the proliferation of AdvML-inspired research works, the proposed workshop – New Frontiers in AdvML – aims to identify the challenges and limitations of current AdvML methods, and explore new perspectives and constructive views of AdvML across the full theory/algorithm/application stack.</p>
           </div>
           <div class="col-lg-6">
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
               <a href="https://twitter.com/AdvMLICML22?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="en" data-show-count="false">Follow @AdvMLICML23</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <br>  
+            <br>   -->
             <div class="row justify-content-center">
               <div class="center">
-                <a class="twitter-timeline" data-lang="en" data-height="400" data-width="600" data-theme="light" href="https://twitter.com/AdvMLICML22?ref_src=twsrc%5Etfw">AdvML Frontiers Offcial Tweet Account</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-lang="en" data-height="300" data-width="400" data-theme="light" href="https://twitter.com/AdvMLICML22?ref_src=twsrc%5Etfw">AdvML Frontiers Offcial Tweet Account</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div>
             </div>
           </div>
@@ -288,8 +288,79 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <br><br>
-		  <h2>Call For Papers</h2>
-		  </div>
+		      <h2>Call For Papers</h2>
+		    </div>
+
+      <!-- HTML code to display the countdown timer -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Countdown Timer</h1>
+            <div class="countdown-timer">
+              <div class="countdown-item">
+                <span class="countdown-number weeks"></span>
+                <span class="countdown-text">Weeks</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number days"></span>
+                <span class="countdown-text">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number hours"></span>
+                <span class="countdown-text">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number minutes"></span>
+                <span class="countdown-text">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number seconds"></span>
+                <span class="countdown-text">Seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript code to create a reusable countdown timer function -->
+      <script>
+      function countdownTimer(targetDate, elementSelector) {
+        // Set the date we're counting down to
+        var countDownDate = new Date(targetDate).getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Calculate the weeks, days, hours, minutes and seconds
+          var weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+          var days = Math.floor(distance % (1000 * 60 * 60 * 24 * 7) / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in the countdown timer
+          document.querySelector(elementSelector + ' .weeks').innerHTML = weeks + " Weeks";
+          document.querySelector(elementSelector + ' .days').innerHTML = days + " Days";
+          document.querySelector(elementSelector + ' .hours').innerHTML = hours + " Hours";
+          document.querySelector(elementSelector + ' .minutes').innerHTML = minutes + " Minutes";
+          document.querySelector('.countdown-timer .seconds').innerHTML = seconds + " Seconds";
+            
+          // If the countdown is finished, display a message
+          if (distance < 0) {
+            clearInterval(x);
+            document.querySelector('.countdown-timer').innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      }
+      </script>
+
+
 		  <h3 class="mb-3 text-left"><b>Submission Instructions</b></h3>
               <p style="font-size: 20px;">We welcome paper submissions in <b>two separate tracks</b>. The <b>full paper submission track</b> accepts papers up to 6 pages with unlimited references or supplementary materials. The <b>Blue Sky Ideas submission track</b> solicits papers up to 2 pages. The paper format will follow the <a href="https://icml.cc/Conferences/2023/StyleAuthorInstructions">ICML 2023 template</a>. Since the accepted papers are considered as non-archival, concurrent submission is allowed but it is the responsibility of the authors to verify the compliance with the other venue's policy. Based on the PC’s recommendation, the accepted papers will be allocated either a spotlight talk or a poster presentation, and made publicly available at the workshop website. &nbsp;</span><br></p>
 
@@ -299,7 +370,7 @@
                
 
               <h4> Important Dates</h4>
-              <p style="font-size: 20px;"> Submission deadline: May 29 '23 (AoE) <br>Notification to authors: Jun 19 '23 (AoE)<br>Camera ready deadline: Jul 21 '23 (AoE) </p>
+              <p style="font-size: 20px;"> Submission deadline: May 29 '23 AoE (<script>countdownTimer("May 30, 2023 11:59:59 UTC")</script>) <br>Notification to authors: Jun 19 '23 AoE (<script>countdownTimer("Jun 20, 2023 11:59:59 UTC")</script>)<br>Camera ready deadline: Jul 21 '23 AoE (<script>countdownTimer("Jun 22, 2023 11:59:59 UTC")</script>) </p>
               <p style="font-size: 20px;"> Please submit to the <a href="#" target="_blank" rel="noopener noreferrer">AdvML Frontiers 2023 @ ICML 2023 OpenReview.</a></p>
 
               <h4> Contacts </h4>
