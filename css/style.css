@@ -697,14 +697,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-
 #award {
-  background: url("../img/award-bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background: url("../img/award-bg.jpg") top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
-  color: #fff;
-  padding: 60px 0 40px 0;
 }
 
 #award:before {
