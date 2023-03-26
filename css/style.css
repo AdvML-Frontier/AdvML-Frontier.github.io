@@ -695,6 +695,50 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+#award {
+  background: url("../img/award-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 40px 0;
+}
+
+#award:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.3);/*0.8*/
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#award h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#award h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#award p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
 
