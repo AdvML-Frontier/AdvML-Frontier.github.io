@@ -477,7 +477,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.1);/*0.8*/
+  background: rgba(6, 12, 34, 0.05);/*0.8*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1017,7 +1017,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #venue .venue-info {
-  background: url("../img/venue.jpg") top center no-repeat;
+  background: url("../img/venue_right.jpg") top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 60px;
@@ -1026,7 +1026,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue .venue-info:before {
   content: "";
-  background: rgba(13, 20, 41, 0.6);/*0.8*/
+  background: rgba(13, 20, 41, 0.2);/*0.8*/
   position: absolute;
   bottom: 0;
   top: 0;
