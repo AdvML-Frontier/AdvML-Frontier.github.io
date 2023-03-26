@@ -268,7 +268,7 @@ h6 {
   color: rgba(202, 206, 221, 0.8);
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -340,7 +340,7 @@ h6 {
   color: #060c22;
   transition: 0.3s;
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: none;
   border-radius: 3px;
 }
