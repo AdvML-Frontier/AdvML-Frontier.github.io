@@ -698,7 +698,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 # About Section
 --------------------------------------------------------------*/
 #award {
-  background: url("../img/award.jpg");
+  background: url("../img/award-bg.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
