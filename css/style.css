@@ -468,7 +468,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   background: url(../img/intro-bg.jpg) top center;
   background-size: cover;
   overflow: hidden;
