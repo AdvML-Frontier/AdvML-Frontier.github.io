@@ -624,11 +624,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #award .about-btn {
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 20px;
   letter-spacing: 2px;
   display: inline-block;
-  padding: 12px 32px;
+  padding: 10px 28px;
   border-radius: 50px;
   transition: 0.5s;
   line-height: 2;
@@ -636,7 +636,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 4px solid #f82249;
+  border: 3px solid #f82249;
 }
 
 #award .about-btn:hover {
