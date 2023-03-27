@@ -28,6 +28,8 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
   <!-- =======================================================
     Theme Name: TheEvent
     Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
@@ -291,73 +293,48 @@
 		      <h2>Call For Papers</h2>
 		    </div>
 
-      <!-- HTML code to display the countdown timer -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Countdown Timer</h1>
-            <div class="countdown-timer">
-              <div class="countdown-item">
-                <span class="countdown-number weeks"></span>
-                <span class="countdown-text">Weeks</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-number days"></span>
-                <span class="countdown-text">Days</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-number hours"></span>
-                <span class="countdown-text">Hours</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-number minutes"></span>
-                <span class="countdown-text">Minutes</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-number seconds"></span>
-                <span class="countdown-text">Seconds</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- JavaScript code to create a reusable countdown timer function -->
       <script>
-      function countdownTimer(targetDate, elementSelector) {
-        // Set the date we're counting down to
-        var countDownDate = new Date(targetDate).getTime();
+        function countdownTimer(targetDate, element) {
+          const countdownElement = document.createElement("p");
+          countdownElement.classList.add("countdown-timer");
+          element.appendChild(countdownElement);
 
-        // Update the countdown every 1 second
-        var x = setInterval(function() {
+          setInterval(() => {
+            const currentDate = new Date().getTime();
+            const distance = targetDate - currentDate;
 
-          // Get today's date and time
-          var now = new Date().getTime();
-            
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-            
-          // Calculate the weeks, days, hours, minutes and seconds
-          var weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-          var days = Math.floor(distance % (1000 * 60 * 60 * 24 * 7) / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          // Output the result in the countdown timer
-          document.querySelector(elementSelector + ' .weeks').innerHTML = weeks + " Weeks";
-          document.querySelector(elementSelector + ' .days').innerHTML = days + " Days";
-          document.querySelector(elementSelector + ' .hours').innerHTML = hours + " Hours";
-          document.querySelector(elementSelector + ' .minutes').innerHTML = minutes + " Minutes";
-          document.querySelector('.countdown-timer .seconds').innerHTML = seconds + " Seconds";
-            
-          // If the countdown is finished, display a message
-          if (distance < 0) {
-            clearInterval(x);
-            document.querySelector('.countdown-timer').innerHTML = "EXPIRED";
-          }
-        }, 1000);
-      }
+            // Calculate remaining time in weeks, days, hours, minutes, and seconds
+            const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor(distance % (1000 * 60 * 60 * 24 * 7) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Construct remaining time message
+            let message = ``;
+            if (weeks > 0) {
+              message += `${weeks} week${weeks > 1 ? "s" : ""} `;
+            }
+            if (days > 0) {
+              message += `${days} day${days > 1 ? "s" : ""} `;
+            }
+            message += `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+            // Display remaining time message
+            countdownElement.textContent = message;
+          }, 1000);
+        }
+
+        const countdownElements = document.querySelectorAll(".countdown-timer");
+        const targetDates = [
+          new Date("May 30, 2023 11:59:59 UTC").getTime(),
+          new Date("Jun 20, 2023 11:59:59 UTC").getTime(),
+          new Date("Jun 22, 2023 11:59:59 UTC").getTime()
+        ];
+
+        for (let i = 0; i < countdownElements.length; i++) {
+          countdownTimer(targetDates[i], countdownElements[i]);
+        }
       </script>
 
 
@@ -370,7 +347,7 @@
                
 
               <h4> Important Dates</h4>
-              <p style="font-size: 20px;"> Submission deadline: May 29 '23 AoE (<script>countdownTimer("May 30, 2023 11:59:59 UTC")</script>) <br>Notification to authors: Jun 19 '23 AoE (<script>countdownTimer("Jun 20, 2023 11:59:59 UTC")</script>)<br>Camera ready deadline: Jul 21 '23 AoE (<script>countdownTimer("Jun 22, 2023 11:59:59 UTC")</script>) </p>
+              <p style="font-size: 20px;"> Submission deadline: May 29 '23 AoE (<a class="countdown-timer" style="font-size: 20px;"></a>) <br>Notification to authors: Jun 19 '23 AoE (<a class="countdown-timer" style="font-size: 20px;"></a>)<br>Camera ready deadline: Jul 21 '23 AoE (<a class="countdown-timer" style="font-size: 20px;"></a>) </p>
               <p style="font-size: 20px;"> Please submit to the <a href="#" target="_blank" rel="noopener noreferrer">AdvML Frontiers 2023 @ ICML 2023 OpenReview.</a></p>
 
               <h4> Contacts </h4>
