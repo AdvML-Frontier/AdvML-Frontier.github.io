@@ -25,10 +25,11 @@
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -113,7 +114,7 @@
             <br>   -->
             <div class="row justify-content-center">
               <div class="center">
-                <a class="twitter-timeline" data-lang="en" data-height="300" data-width="400" data-theme="light" href="https://twitter.com/AdvMLICML22?ref_src=twsrc%5Etfw">AdvML Frontiers Offcial Tweet Account</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" data-lang="en" data-height="500" data-width="400" data-theme="light" href="https://twitter.com/AdvMLICML22?ref_src=twsrc%5Etfw">AdvML Frontiers Offcial Tweet Account</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div>
             </div>
           </div>
@@ -293,51 +294,6 @@
 		      <h2>Call For Papers</h2>
 		    </div>
 
-      <script>
-        function countdownTimer(targetDate, element) {
-          const countdownElement = document.createElement("p");
-          countdownElement.classList.add("countdown-timer");
-          element.appendChild(countdownElement);
-
-          setInterval(() => {
-            const currentDate = new Date().getTime();
-            const distance = targetDate - currentDate;
-
-            // Calculate remaining time in weeks, days, hours, minutes, and seconds
-            const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-            const days = Math.floor(distance % (1000 * 60 * 60 * 24 * 7) / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Construct remaining time message
-            let message = ``;
-            if (weeks > 0) {
-              message += `${weeks} week${weeks > 1 ? "s" : ""} `;
-            }
-            if (days > 0) {
-              message += `${days} day${days > 1 ? "s" : ""} `;
-            }
-            message += `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-
-            // Display remaining time message
-            countdownElement.textContent = message;
-          }, 1000);
-        }
-
-        const countdownElements = document.querySelectorAll(".countdown-timer");
-        const targetDates = [
-          new Date("May 30, 2023 11:59:59 UTC").getTime(),
-          new Date("Jun 20, 2023 11:59:59 UTC").getTime(),
-          new Date("Jun 22, 2023 11:59:59 UTC").getTime()
-        ];
-
-        for (let i = 0; i < countdownElements.length; i++) {
-          countdownTimer(targetDates[i], countdownElements[i]);
-        }
-      </script>
-
-
 		  <h3 class="mb-3 text-left"><b>Submission Instructions</b></h3>
               <p style="font-size: 20px;">We welcome paper submissions in <b>two separate tracks</b>. The <b>full paper submission track</b> accepts papers up to 6 pages with unlimited references or supplementary materials. The <b>Blue Sky Ideas submission track</b> solicits papers up to 2 pages. The paper format will follow the <a href="https://icml.cc/Conferences/2023/StyleAuthorInstructions">ICML 2023 template</a>. Since the accepted papers are considered as non-archival, concurrent submission is allowed but it is the responsibility of the authors to verify the compliance with the other venue's policy. Based on the PC’s recommendation, the accepted papers will be allocated either a spotlight talk or a poster presentation, and made publicly available at the workshop website. &nbsp;</span><br></p>
 
@@ -381,6 +337,50 @@
 		  <br><br>
         
       </div>
+
+    <script>
+        function countdownTimer(targetDate, element) {
+          const countdownElement = document.createElement("p");
+          countdownElement.classList.add("countdown-timer");
+          element.appendChild(countdownElement);
+
+          setInterval(() => {
+            const currentDate = new Date().getTime();
+            const distance = targetDate - currentDate;
+
+            // Calculate remaining time in weeks, days, hours, minutes, and seconds
+            const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor(distance % (1000 * 60 * 60 * 24 * 7) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Construct remaining time message
+            let message = ``;
+            if (weeks > 0) {
+              message += `${weeks} week${weeks > 1 ? "s" : ""} `;
+            }
+            if (days > 0) {
+              message += `${days} day${days > 1 ? "s" : ""} `;
+            }
+            message += `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+            // Display remaining time message
+            countdownElement.textContent = message;
+          }, 1000);
+        }
+
+        const countdownElements = document.querySelectorAll(".countdown-timer");
+        const targetDates = [
+          new Date("May 30, 2023 11:59:59 UTC").getTime(),
+          new Date("Jun 20, 2023 11:59:59 UTC").getTime(),
+          new Date("Jun 22, 2023 11:59:59 UTC").getTime()
+        ];
+
+        for (let i = 0; i < countdownElements.length; i++) {
+          countdownTimer(targetDates[i], countdownElements[i]);
+        }
+      </script>
 
     </section>
 
