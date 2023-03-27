@@ -1847,3 +1847,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   margin-top: 5px;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 4px; /* Increase or decrease the value to adjust the space between columns */
+  text-align: left;
+  border: none;
+}
