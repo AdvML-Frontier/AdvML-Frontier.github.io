@@ -1881,3 +1881,54 @@ td {
   text-align: left;
   border: none;
 }
+
+
+#schedule .collapsible {
+    background-color: #f6f7fd;  /* Using the same color as nav-tabs */
+    color: #0e1b4d;                 /* White text for contrast */
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;                /* Removing the border for consistency */
+    text-align: left;
+    outline: none;
+    font-size: 18px;             /* Keeping the same font-size */
+    font-weight: 600;            /* Making font bold to align with other headings */
+    margin: 10px 0;              /* Adding some margin for better spacing */
+}
+
+#schedule .collapsible:after {
+    background-color: #fff;
+    content: '\02795';
+    font-size: 18px;
+    float: right;
+    margin-left: 5px;
+    color: #fff;                 /* To ensure the symbol's color matches the button's text */
+}
+
+#schedule .collapsible.active {
+    background-color: #f82249;  /* Active color when expanded, consistent with tabs */
+}
+
+#schedule .collapsible.active:after {
+    content: "\2796";
+}
+
+#schedule .content {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    max-height: 0;
+    overflow: hidden;      /* Hide overflow */
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+    background-color: #fff;
+    font-size: 17px;
+    color: #152b79;
+    font-style: italic;
+}
+
+#schedule .collapsible.active + .content {
+    padding: 10px;         
+    max-height: 800px;     /* Increase this value if needed */
+    overflow-y: auto;      /* Show a scrollbar if content exceeds max-height */
+}
