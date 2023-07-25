@@ -1892,7 +1892,7 @@ td {
     border: none;                /* Removing the border for consistency */
     text-align: left;
     outline: none;
-    font-size: 18px;             /* Keeping the same font-size */
+    font-size: 15px;             /* Keeping the same font-size */
     font-weight: 600;            /* Making font bold to align with other headings */
     margin: 10px 0;              /* Adding some margin for better spacing */
 }
@@ -1900,7 +1900,7 @@ td {
 #schedule .collapsible:after {
     background-color: #fff;
     content: '\02795';
-    font-size: 18px;
+    font-size: 15px;
     float: right;
     margin-left: 5px;
     color: #fff;                 /* To ensure the symbol's color matches the button's text */
@@ -1922,7 +1922,7 @@ td {
     overflow: hidden;      /* Hide overflow */
     transition: max-height 0.2s ease-out, padding 0.2s ease-out;
     background-color: #fff;
-    font-size: 17px;
+    font-size: 14px;
     color: #152b79;
     font-style: italic;
 }
