@@ -968,7 +968,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
-
 #schedule {
   padding: 60px 0 60px 0;
 }
@@ -995,6 +994,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 10px 100px;
 }
 
+@media (max-width: 991px) {
+  #schedule .nav-tabs a {
+    padding: 8px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  #schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+
 #schedule .nav-tabs a.active {
   background-color: #f82249;
   color: #fff;
@@ -1007,8 +1024,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 auto 30px auto;
 }
 
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+
 #schedule .tab-pane {
-  transition: ease-in-out .2s;
+  transition: ease-in-out 0.2s;
 }
 
 #schedule .schedule-item {
@@ -1038,7 +1061,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule .schedule-item .speaker img {
   height: 100%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-left: 50%;
   transition: all ease-in-out 0.3s;
@@ -1066,7 +1088,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
-
 #venue {
   padding: 60px 0;
 }
@@ -1091,7 +1112,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue .venue-info:before {
   content: "";
-  background: rgba(13, 20, 41, 0.2);/*0.8*/
+  background: rgba(13, 20, 41, 0.8);/*0.8*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1125,14 +1146,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #venue .venue-gallery:hover img {
-  -webkit-transform: scale(1.1);
+  webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
 # Hotels Section
 --------------------------------------------------------------*/
-
 #hotels {
   padding: 60px 0;
 }
@@ -1144,7 +1164,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #hotels .hotel:hover .hotel-img img {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -1192,7 +1211,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
-
 #gallery {
   padding: 60px;
   overflow: hidden;
@@ -1209,32 +1227,78 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-right: 2px solid #fff;
 }
 
-#gallery .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
+
+#gallery .container-fluid {
+  margin-bottom: 3px;
 }
 
-#gallery .owl-dot.active {
+#gallery .venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+@media (max-width: 574px) {
+  #gallery .venue-info h3 {
+    font-size: 24px;
+  }
+}
+
+#gallery .venue-gallery-container {
+  padding-right: 12px;
+}
+
+#gallery .venue-gallery {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+#gallery .venue-gallery img {
+  transition: all ease-in-out 0.4s;
+}
+
+#gallery .venue-gallery:hover img {
+  transform: scale(1.5);
+}
+
+
+/*#gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+#gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #f82249;
+}
+
+#gallery .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #f82249;
 }
 
-#gallery .gallery-carousel .owl-stage-outer {
-  overflow: visible;
+#gallery .swiper-slide-active {
+  text-align: center;
 }
 
-#gallery .gallery-carousel .center {
-  border: 6px solid #f82249;
-  margin: -10px;
-  box-sizing: content-box;
-  padding: 4px;
-  background: #fff;
-  z-index: 1;
-}
+@media (min-width: 992px) {
+  #gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
 
+  #gallery .swiper-slide-active {
+    border: 5px solid #f82249;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.15);
+    margin-top: 6px;
+  }
+}
+*/
 /*--------------------------------------------------------------
 # supporters Section
 --------------------------------------------------------------*/
