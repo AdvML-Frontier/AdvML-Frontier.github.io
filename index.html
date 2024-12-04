@@ -292,7 +292,7 @@
   <!--==========================
       Schedule Section
     ============================-->
-    <!-- <section id="schedule" class="section-with-bg">
+    <section id="schedule" class="section-with-bg">
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Schedule</h2>
@@ -318,23 +318,50 @@
             <div class="row schedule-item">
               <div class="col-md-10">
                 <h4>9:10 - 9:40</h4>
-                <p>Speaker 1</p>
+                <p>Speaker: Alina Oprea</p>
+                <p>Title: TBD</p>
+                <p>Bio: TBD</p>
+                <p>Abstract: TBD</p>
               </div>
             </div>
     
             <div class="row schedule-item">
               <div class="col-md-10">
                 <h4>9:40 - 10:10</h4>
-                <p>Speaker 2</p>
+                <p>Speaker: Eleni Triantafillou</p>
+                <p>Title: TBD</p>
+                <p>Bio: TBD</p>
+                <p>Abstract: TBD</p>
               </div>
             </div>
     
             <div class="row schedule-item">
               <div class="col-md-10">
                 <h4>10:10 - 10:40</h4>
-                <p>Speaker 3</p>
+                <p><strong>Speaker:</strong> Franziska Boenisch</p>
+                <p><strong>Title:</strong> From Risks to Resilience: Protecting Privacy in Adapted Language Models</p>
+                <!-- Clickable button/link -->
+                <a href="javascript:void(0);" onclick="toggleDetails(this)" class="toggle-details">Show Details</a>
+                <!-- Hidden details -->
+                <div class="details" style="display: none;">
+                  <p><strong>Bio:</strong> Franziska is a tenure-track faculty at the CISPA Helmholtz Center for Information Security where she co-leads the SprintML lab. Before, she was a Postdoctoral Fellow at the University of Toronto and Vector Institute advised by Prof. Nicolas Papernot. Her current research centers around private and trustworthy machine learning. Franziska obtained her Ph.D. at the Computer Science Department at Freie University Berlin, where she pioneered the notion of individualized privacy in machine learning. During her Ph.D., Franziska was a research associate at the Fraunhofer Institute for Applied and Integrated Security (AISEC), Germany. She received a Fraunhofer TALENTA grant for outstanding female early career researchers, the German Industrial Research Foundation prize for her research on machine learning privacy, and the Fraunhofer ICT Dissertation Award 2023, and was named a GI-Junior Fellow in 2024.</p>
+                  <p><strong>Abstract:</strong> As language models (LLMs) underpin various sensitive applications, preserving privacy of their training data is crucial for their trustworthy deployment. This talk will focus on the privacy of LLM adaptation data. We will see how easily sensitive data can leak from the adaptations, putting privacy in risk. We will then dive into designing protection methods, focusing on how we can obtain privacy guarantees for adaptation data, in particular for prompts. We will also compare private adaptations for open LLMs and their closed, proprietary counterparts across different axes, finding that private adaptations for open LLMs yield higher privacy, better performance, and lower costs. Finally, we will discuss how to monitor privacy of adapted LLMs through dedicated auditing. By identifying privacy risks of adapting LLMs, understanding how to mitigate them, and conducting thorough audits, we can ensure that LLMs can be employed for societal benefits without putting individual data at risk.</p>
+                </div>
               </div>
             </div>
+            
+            <script>
+              function toggleDetails(element) {
+                const details = element.nextElementSibling;
+                if (details.style.display === "none") {
+                  details.style.display = "block";
+                  element.textContent = "Hide Details";
+                } else {
+                  details.style.display = "none";
+                  element.textContent = "Show Details";
+                }
+              }
+            </script>
     
             <div class="row schedule-item">
               <div class="col-md-10">
@@ -371,6 +398,9 @@
               <div class="col-md-10">
                 <h4>2:00 - 2:30</h4>
                 <p>Speaker 4</p>
+                <p>Title: TBD</p>
+                <p>Bio: TBD</p>
+                <p>Abstract: TBD</p>
               </div>
             </div>
     
@@ -378,6 +408,9 @@
               <div class="col-md-10">
                 <h4>2:30 - 3:00</h4>
                 <p>Speaker 5</p>
+                <p>Title: TBD</p>
+                <p>Bio: TBD</p>
+                <p>Abstract: TBD</p>
               </div>
             </div>
     
@@ -385,22 +418,88 @@
               <div class="col-md-10">
                 <h4>3:00 - 3:30</h4>
                 <p>Speaker 6</p>
+                <p>Title: TBD</p>
+                <p>Bio: TBD</p>
+                <p>Abstract: TBD</p>
               </div>
             </div>
     
             <div class="row schedule-item">
               <div class="col-md-10">
                 <h4>3:30 - 3:45</h4>
-                <p>Rising Star 1</p>
+                <p><strong>Rising Star:</strong> Xuandong Zhao</p>
+                <p><strong>Title:</strong> Empowering Responsible Use of Large Language Models</p>
+                <!-- Clickable button/link -->
+                <a href="javascript:void(0);" onclick="toggleDetails(this)" class="toggle-details">Show Details</a>
+                <!-- Hidden details -->
+                <div class="details" style="display: none;">
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                    The rapid advancement of powerful Large Language Models (LLMs), such as ChatGPT and Llama, brings new creative possibilities but poses significant risks, including misuse in fake news, intellectual property infringements, and privacy leaks. In response to these concerns, this talk will explore approaches to promoting the responsible use of LLMs from both theoretical and empirical perspectives. 
+                  </p>
+                  <p>
+                    I will present three key approaches:
+                    <ol>
+                      <li><strong>Detecting AI-generated Text via Watermarking:</strong> We propose a robust and high-quality watermark method, Unigram-Watermark, and introduce a rigorous theoretical framework to quantify the effectiveness and robustness of LLM watermarks.</li>
+                      <li><strong>Protecting Intellectual Property of LLMs:</strong> We safeguard the intellectual property of LLMs through novel watermarking techniques to prevent model-stealing attacks.</li>
+                      <li><strong>Privacy-Preserving LLMs:</strong> We employ Confidential Redacted Training (CRT) to train and fine-tune language generation models while protecting sensitive information.</li>
+                    </ol>
+                  </p>
+                  <p>
+                    We will conclude with exciting future research plans for AI safety, security, and privacy, such as red-teaming and next-generation watermarking.
+                  </p>
+                </div>
               </div>
             </div>
+            
+            <script>
+              function toggleDetails(element) {
+                const details = element.nextElementSibling;
+                if (details.style.display === "none") {
+                  details.style.display = "block";
+                  element.textContent = "Hide Details";
+                } else {
+                  details.style.display = "none";
+                  element.textContent = "Show Details";
+                }
+              }
+            </script>
     
-            <div class="row schedule-item">
-              <div class="col-md-10">
-                <h4>3:45 - 4:00</h4>
-                <p>Rising Star 2</p>
-              </div>
-            </div>
+    <div class="row schedule-item">
+      <div class="col-md-10">
+        <h4>3:45 - 4:00</h4>
+        <p><strong>Rising Star:</strong> Alexander Robey</p>
+        <p><strong>Title:</strong> Jailbreaking LLM-Controlled Robots</p>
+        <!-- Clickable button/link -->
+        <a href="javascript:void(0);" onclick="toggleDetails(this)" class="toggle-details">Show Details</a>
+        <!-- Hidden details -->
+        <div class="details" style="display: none;">
+          <p><strong>Abstract:</strong></p>
+          <p>
+            Recent research has shown that large language models (LLMs) such as OpenAI's ChatGPT are susceptible to jailbreaking attacks, wherein malicious users fool an LLM into generating harmful content (e.g., bomb-building instructions). However, these attacks are generally limited to eliciting text from chatbots. 
+          </p>
+          <p>
+            In contrast, we consider attacks on LLM-controlled robots, which, if jailbroken, could be manipulated into causing physical harm in the real world. Our attacks successfully jailbreak an NVIDIA self-driving LLM, a wheeled Clearpath Robotics Jackal robot, and, most concerningly, the commercially available Unitree Go2 robot dog.
+          </p>
+          <p>
+            In this talk, we will walk through the recent history of jailbreaking, describe our robotic attacks, and discuss how such attacks can be mitigated to avoid the misuse of LLM-powered robots.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleDetails(element) {
+        const details = element.nextElementSibling;
+        if (details.style.display === "none") {
+          details.style.display = "block";
+          element.textContent = "Hide Details";
+        } else {
+          details.style.display = "none";
+          element.textContent = "Show Details";
+        }
+      }
+    </script>
     
             <div class="row schedule-item">
               <div class="col-md-10">
@@ -412,7 +511,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   <!--==========================
     Call for Paper
