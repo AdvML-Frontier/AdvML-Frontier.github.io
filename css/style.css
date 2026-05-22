@@ -477,7 +477,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.05);/*0.8*/
+  background: rgba(6, 12, 34, 0.05);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -506,6 +506,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 #intro h1 {
@@ -683,11 +684,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   color: #fff;
   padding: 60px 0 40px 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
 
 #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.3);/*0.8*/
+  background: rgba(13, 20, 41, 0.36);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -759,6 +761,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
@@ -771,51 +774,60 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0 30px 0;
 }
 
-#speakers .speaker {
+#speakers .speaker, #organizers .speaker {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  background: #fff;
+  width: 100%;
 }
 
-#speakers .speaker .details {
-  background: rgba(49,47,98, 0.76);
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  right: 0;
+#speakers .speaker img, #organizers .speaker img {
+  width: 100%;
+  aspect-ratio: 237 / 273; /* Portrait ratio from 2024 */
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+#speakers .speaker .details, #organizers .speaker .details {
+  background: rgba(49,47,98, 0.85);
   text-align: center;
-  padding-top: 10px;
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 14px 10px;
 }
 
-#speakers .speaker .details h3 {
+#speakers .speaker .details h3, #organizers .speaker .details h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-#speakers .speaker .details p {
+#speakers .speaker .details p, #organizers .speaker .details p {
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 10px;
   font-style: italic;
 }
 
-#speakers .speaker .details .social {
-  height: 30px;
+#speakers .speaker .details .social, #organizers .speaker .details .social {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#speakers .speaker .details a {
+#speakers .speaker:hover .details .social, #organizers .speaker:hover .details .social {
+  height: 30px;
+  opacity: 1;
+}
+
+#speakers .speaker .details a, #organizers .speaker .details a {
   color: #fff;
 }
 
-#speakers .speaker .details a:hover {
+#speakers .speaker .details a:hover, #organizers .speaker .details a:hover {
   color: #f82249;
-}
-
-#speakers .speaker:hover .details {
-  bottom: 0;
 }
 
 #speakers-details {
@@ -875,52 +887,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0 30px 0;
 }
 
-#organizers .speaker {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-#organizers .speaker .details {
-  background: rgba(49,47,98, 0.76);
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  right: 0;
-  text-align: center;
-  padding-top: 10px;
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-#organizers .speaker .details h3 {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-#organizers .speaker .details p {
-  color: #fff;
-  font-size: 15px;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-#organizers .speaker .details .social {
-  height: 30px;
-}
-
-#organizers .speaker .details a {
-  color: #fff;
-}
-
-#organizers .speaker .details a:hover {
-  color: #f82249;
-}
-
-#organizers .speaker:hover .details {
-  bottom: 0;
-}
+/* Specific position adjustments for headshots with off-center faces */
+.img-pos-center { object-position: center center !important; }
+.img-pos-bottom { object-position: bottom center !important; }
 
 #organizers-details {
   padding: 60px 0;
