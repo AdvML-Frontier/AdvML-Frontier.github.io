@@ -7,3 +7,4 @@ CLAUDE*.md
 .mcp.json
 ref/
 .vercel
+work_logs/
