@@ -666,6 +666,96 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+/*--- AdvML Rising Star: refined application instructions ---*/
+#award_app .award-section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+#award_app .award-section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  background: #f82249;
+  border-radius: 2px;
+}
+
+#award_app .award-steps {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+  margin: 0 0 0.5rem;
+  max-width: 880px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #2f3138;
+}
+
+#award_app .award-steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.15rem;
+}
+
+#award_app .award-steps > li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75;
+  color: #0e1b4d;
+}
+
+#award_app .award-substeps {
+  list-style: none;
+  counter-reset: substep;
+  padding-left: 0;
+  margin: 0.7rem 0 0;
+}
+
+#award_app .award-substeps > li {
+  counter-increment: substep;
+  position: relative;
+  padding-left: 2.3rem;
+  margin-bottom: 0.55rem;
+}
+
+#award_app .award-substeps > li:last-child {
+  margin-bottom: 0;
+}
+
+#award_app .award-substeps > li::before {
+  content: "(" counter(substep, lower-alpha) ").";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: #0e1b4d;
+}
+
+#award_app .award-steps a {
+  color: #f82249;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(248, 34, 73, 0.45);
+  transition: text-decoration-color 0.3s;
+}
+
+#award_app .award-steps a:hover {
+  text-decoration-color: #f82249;
+}
+
 @-webkit-keyframes pulsate-btn {
   0% {
     -webkit-transform: scale(0.6, 0.6);
