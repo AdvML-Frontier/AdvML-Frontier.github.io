@@ -1,0 +1,14 @@
+# Keep internal/working files out of the published preview
+.git
+.github
+.vercel
+.claude
+.claude.json
+.claude.json.backup
+ref
+CLAUDE.md
+CLAUDE.local.md
+.gitignore
+.DS_Store
+**/.DS_Store
+*.pptx

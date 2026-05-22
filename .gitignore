@@ -5,3 +5,5 @@ template
 .claude*
 CLAUDE*.md
 .mcp.json
+ref/
+.vercel
