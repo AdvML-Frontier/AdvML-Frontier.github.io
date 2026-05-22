@@ -645,6 +645,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+#award_app .about-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 2;
+  margin: 10px 10px 28px;
+  color: #f82249;
+  background: transparent;
+  border: 3px solid #f82249;
+}
+
+#award_app .about-btn:hover {
+  background: #f82249;
+  color: #fff;
+}
+
 @-webkit-keyframes pulsate-btn {
   0% {
     -webkit-transform: scale(0.6, 0.6);
