@@ -109,6 +109,11 @@ jQuery(document).ready(function( $ ) {
           scrollTop: target.offset().top - top_space
         }, 600, 'easeInOutExpo');
 
+        // Reflect the section in the address bar so the URL can be copied/pinned
+        if (history.pushState) {
+          history.pushState(null, null, this.hash);
+        }
+
         if ($(this).parents('.nav-menu').length) {
           $('.nav-menu .menu-active').removeClass('menu-active');
           $(this).closest('li').addClass('menu-active');
