@@ -8,3 +8,4 @@ CLAUDE*.md
 ref/
 .vercel
 work_logs/
+Claude outputs/

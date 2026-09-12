@@ -314,10 +314,56 @@
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time><center>Time: <br> 10:00-10:45 </time></div>
+              <div class="col-md-2"><time><center>Time: <br> 10:00-10:15 </time></div>
               <div class="col-md-10">
-                <h4>AdvML Rising Star Award Presentations</h4>
-                <p>(3&times;15 min)</p>
+                <div class="speaker">
+                  <img src="img/awardees/youssef.jpg" alt="Youssef Allouah">
+                </div>
+                <h4>AdvML Rising Star Award Presentation</h4>
+                <p><strong>Awardee:</strong> Youssef Allouah</p>
+                <p><strong>Title:</strong> What Does It Mean for a Language Model to Forget?</p>
+                <div class="keynote">
+                  <button class="collapsible">Abstract</button>
+                  <div class="content">
+                      <p>Machine unlearning is often introduced as efficient data deletion: when specified training records must be removed, update the model to match retraining without them. But language-model unlearning now includes requests such as removing a concept or suppressing a copyrighted work, where neither the relevant training records nor the right retraining counterfactual may be obvious. As unlearning moves beyond record deletion, specifying what to forget becomes part of the technical problem. My recent work studies this shift from three directions: certifying model updates once the forget set is given, selecting data to remove when the target is a distribution, and constructing forget sets from higher-level requests for language models. These results suggest separating three parts of the problem&mdash;what should be forgotten, which data should represent that goal, and how the model should be updated&mdash;and asking for guarantees that match the intended form of forgetting.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time><center>Time: <br> 10:15-10:30 </time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/awardees/vaidehi.jpg" alt="Vaidehi Patil">
+                </div>
+                <h4>AdvML Rising Star Award Presentation</h4>
+                <p><strong>Awardee:</strong> Vaidehi Patil</p>
+                <p><strong>Title:</strong> Unlearning, Privacy Leakage, and Adversarial Interaction: Stress-Testing Privacy in Modern LLM Systems</p>
+                <div class="keynote">
+                  <button class="collapsible">Abstract</button>
+                  <div class="content">
+                      <p>As large language models (LLMs) evolve into multimodal, multi-agent, and conversational systems, privacy risks extend far beyond simple memorization. In this talk, I present a cohesive view of my recent work on understanding and controlling sensitive information leakage in LLMs or agentic systems under adversarial interaction. I begin by examining whether sensitive information can truly be deleted from model weights, showing that even state-of-the-art unlearning and model editing methods leave recoverable traces under both white-box and black-box attacks. I then extend this analysis to multimodal LLMs, introducing UnLOK-VQA, a benchmark for multimodal unlearning, and demonstrating that cross-modal attacks are significantly more effective than text- or image-only attacks. Next, I address the core tension between deletion and utility, presenting UPCORE, a coreset-selection based framework that improves unlearning by selectively pruning forget data to reduce collateral damage. I then move to multi-agent settings, where privacy leakage emerges compositionally across interactions. I show how Theory-of-Mind reasoning and collaborative defenses mitigate these risks. Finally, I introduce the Double-Agent paradigm, where privacy protection becomes a strategic interaction: the defender must model the adversary&rsquo;s beliefs and deliberately steer them toward a false belief that sensitive information has been extracted. Overall, this talk argues that safeguarding privacy in modern LLM systems requires moving beyond static notions of information deletion toward adversarially robust, interaction-aware, and utility-preserving approaches.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time><center>Time: <br> 10:30-10:45 </time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/awardees/jianing.jpg" alt="Jianing Zhu">
+                </div>
+                <h4>AdvML Rising Star Award Presentation</h4>
+                <p><strong>Awardee:</strong> Jianing Zhu</p>
+                <p><strong>Title:</strong> Reliability Over the Lifetime of Evolving AI Systems</p>
+                <div class="keynote">
+                  <button class="collapsible">Abstract</button>
+                  <div class="content">
+                      <p>For most of the last decade, machine learning treated reliability as something to be established once: a model was evaluated before deployment, and that evaluation was trusted for its entire service life. Modern AI systems no longer fit this picture. They run continually, accumulate history, and update their own state, so the system in deployment gradually drifts away from the one that was evaluated. This talk asks what it takes to sustain reliability over that lifetime. Drawing on my research, I will discuss how to withstand corruption of an agent&rsquo;s operating process, how to detect degradation that emerges only along a trajectory, and how to govern what a long-running agent retains and exposes. I will close with an outlook on reliability as something we sustain across a lifetime, rather than establish once and trust.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
