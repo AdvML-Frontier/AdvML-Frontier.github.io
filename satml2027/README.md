@@ -4,7 +4,7 @@ This directory contains the `/satml2027` event page on the `satml27` branch.
 
 The page follows the established AdvML event structure and visual language: the dark fixed header, conference banner, pink accent color, schedule rows, and past-event links. It incorporates HuG ideas where they improve usability: a concise workshop note followed by one expandable CFP, alternating speaker profiles, expandable program details, compact organizer portraits, stronger mobile behavior, and accessible navigation.
 
-The public-facing content is populated from the supplied SaTML workshop proposal. Internal planning details are intentionally omitted. SaTML 2027 is in Reykjavík, Iceland; the exact venue is still forthcoming. The submission platform and keynote speakers and talk details also remain provisional.
+The public-facing content is populated from the supplied SaTML workshop proposal. Internal planning details are intentionally omitted. SaTML 2027 is in Reykjavík, Iceland; the exact venue is still forthcoming. The submission site will be announced in the near future, while the keynote speakers and talk details remain provisional.
 
 ## Where to edit
 
