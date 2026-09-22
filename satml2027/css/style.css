@@ -453,7 +453,7 @@ main > section {
 }
 
 .cfp-topics .topic-list {
-  color: var(--muted);
+  color: var(--ink);
   line-height: 1.6;
 }
 
