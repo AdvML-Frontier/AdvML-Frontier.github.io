@@ -443,6 +443,20 @@ main > section {
   font-size: 1.03rem;
 }
 
+.cfp-topics {
+  margin: 1.35rem 0 1.5rem;
+}
+
+.cfp-topics h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.cfp-topics .topic-list {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .important-dates {
   max-width: var(--narrow-width);
   margin: 1.5rem 0 1rem;
