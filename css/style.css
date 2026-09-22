@@ -1921,7 +1921,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-@media (max-width: 1199px) {
+/* Widen the header so the nav bar fits on one line with the SaTML'27 link.
+   Scoped to #header, so the page content keeps its 1140px width. */
+@media (min-width: 1240px) {
+  #header .container {
+    max-width: 1240px;
+  }
+}
+
+@media (max-width: 1239px) {
   #header .container {
     max-width: 100%;
   }
