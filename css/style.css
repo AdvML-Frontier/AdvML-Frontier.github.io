@@ -1937,6 +1937,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   .nav-menu a {
     padding: 8px 4px;
   }
+
+  #nav-menu-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Below 1240px the nav bar is tightened step by step so that it still fits on
+   one line, down to 992px where the mobile menu takes over. */
+@media (max-width: 1239px) and (min-width: 1100px) {
+  .nav-menu a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .nav-menu a {
+    padding: 8px 3px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 991px) {
