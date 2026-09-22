@@ -670,7 +670,7 @@ main > section {
 }
 
 .organizer-entry {
-  --organizer-photo-size: 124px;
+  --organizer-photo-size: 144px;
   --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
   position: relative;
   display: grid;
@@ -1055,9 +1055,9 @@ main > section {
   }
 
   .organizer-entry:nth-child(n) {
-    --organizer-photo-size: 112px;
+    --organizer-photo-size: 124px;
     --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
-    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-columns: 124px minmax(0, 1fr);
   }
 
   .organizer-entry:nth-child(4n + 2),
@@ -1165,8 +1165,8 @@ main > section {
   }
 
   .organizer-entry {
-    --organizer-photo-size: 92px;
-    grid-template-columns: 92px minmax(0, 1fr);
+    --organizer-photo-size: 104px;
+    grid-template-columns: 104px minmax(0, 1fr);
     padding: 0.9rem 0;
   }
 
