@@ -687,6 +687,7 @@ main > section {
 .organizer-entry {
   --organizer-photo-size: 144px;
   --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
+  --organizer-backdrop-active: linear-gradient(135deg, rgba(115, 60, 154, 0.55), rgba(178, 134, 210, 0.42));
   position: relative;
   display: grid;
   grid-template-columns: var(--organizer-photo-size) minmax(0, 1fr);
@@ -711,6 +712,12 @@ main > section {
 
 .organizer-entry:nth-child(even) {
   --organizer-backdrop: linear-gradient(135deg, rgba(71, 126, 151, 0.26), rgba(161, 208, 218, 0.22));
+  --organizer-backdrop-active: linear-gradient(135deg, rgba(27, 109, 147, 0.55), rgba(103, 190, 210, 0.42));
+}
+
+.organizer-entry:hover::before,
+.organizer-entry:focus-within::before {
+  background: var(--organizer-backdrop-active);
 }
 
 .organizer-entry img {
@@ -780,6 +787,12 @@ main > section {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.4;
+  transition: color 180ms ease;
+}
+
+.organizer-entry:hover p,
+.organizer-entry:focus-within p {
+  color: var(--pink-dark);
 }
 
 /* Schedule */
@@ -1072,12 +1085,14 @@ main > section {
   .organizer-entry:nth-child(n) {
     --organizer-photo-size: 124px;
     --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
+    --organizer-backdrop-active: linear-gradient(135deg, rgba(115, 60, 154, 0.55), rgba(178, 134, 210, 0.42));
     grid-template-columns: 124px minmax(0, 1fr);
   }
 
   .organizer-entry:nth-child(4n + 2),
   .organizer-entry:nth-child(4n + 3) {
     --organizer-backdrop: linear-gradient(135deg, rgba(71, 126, 151, 0.26), rgba(161, 208, 218, 0.22));
+    --organizer-backdrop-active: linear-gradient(135deg, rgba(27, 109, 147, 0.55), rgba(103, 190, 210, 0.42));
   }
 
   .organizer-entry img {
@@ -1187,10 +1202,12 @@ main > section {
 
   .organizer-entry:nth-child(n) {
     --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
+    --organizer-backdrop-active: linear-gradient(135deg, rgba(115, 60, 154, 0.55), rgba(178, 134, 210, 0.42));
   }
 
   .organizer-entry:nth-child(even) {
     --organizer-backdrop: linear-gradient(135deg, rgba(71, 126, 151, 0.26), rgba(161, 208, 218, 0.22));
+    --organizer-backdrop-active: linear-gradient(135deg, rgba(27, 109, 147, 0.55), rgba(103, 190, 210, 0.42));
   }
 
   .organizer-entry img {
