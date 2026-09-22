@@ -670,7 +670,7 @@ main > section {
 }
 
 .organizer-entry {
-  --organizer-photo-size: 104px;
+  --organizer-photo-size: 116px;
   --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
   position: relative;
   display: grid;
@@ -732,8 +732,9 @@ main > section {
 }
 
 .organizer-entry h3 {
-  margin-bottom: 0.08rem;
-  font-size: 1.08rem;
+  margin-bottom: 0.18rem;
+  font-size: 1.16rem;
+  line-height: 1.25;
 }
 
 .organizer-entry h3 a {
@@ -762,7 +763,8 @@ main > section {
 .organizer-entry p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 /* Schedule */
@@ -1053,9 +1055,9 @@ main > section {
   }
 
   .organizer-entry:nth-child(n) {
-    --organizer-photo-size: 92px;
+    --organizer-photo-size: 104px;
     --organizer-backdrop: linear-gradient(135deg, rgba(135, 105, 160, 0.26), rgba(186, 160, 208, 0.2));
-    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
   }
 
   .organizer-entry:nth-child(4n + 2),
@@ -1163,8 +1165,8 @@ main > section {
   }
 
   .organizer-entry {
-    --organizer-photo-size: 80px;
-    grid-template-columns: 80px minmax(0, 1fr);
+    --organizer-photo-size: 88px;
+    grid-template-columns: 88px minmax(0, 1fr);
     padding: 0.9rem 0;
   }
 
