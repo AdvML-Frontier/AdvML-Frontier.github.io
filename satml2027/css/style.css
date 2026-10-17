@@ -500,6 +500,11 @@ main > section {
   font-weight: 800;
 }
 
+.deadline-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.85rem;
+}
+
 .submission-note {
   margin: 0.8rem 0;
   color: var(--muted);
@@ -1051,11 +1056,10 @@ main > section {
   grid-column: 2;
   grid-row: 1;
   min-width: 190px;
-  text-align: left;
+  text-align: right;
 }
 
 .footer-layout strong,
-.footer-layout span,
 .footer-layout a {
   display: block;
 }
@@ -1066,23 +1070,21 @@ main > section {
   font-size: 1.1rem;
 }
 
-.footer-contact span {
-  margin-bottom: 0.3rem;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .footer-layout p {
   margin: 0;
 }
 
 .footer-layout a {
   color: var(--accent-soft);
-  font-weight: 700;
+  font-weight: 400;
+  overflow-wrap: anywhere;
   text-underline-offset: 0.2em;
+}
+
+.footer-layout .footer-policy {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* Responsive navigation and layouts */
@@ -1319,6 +1321,7 @@ main > section {
     grid-column: 1;
     grid-row: 1;
     min-width: 0;
+    text-align: left;
   }
 
   .footer-brand {
