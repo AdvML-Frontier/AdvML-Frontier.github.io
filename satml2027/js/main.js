@@ -53,6 +53,22 @@
   window.addEventListener("scroll", updateScrollState, { passive: true });
   updateScrollState();
 
+  document.querySelectorAll(".keynote-bio-toggle").forEach(function (button) {
+    var remainingBio = document.getElementById(button.getAttribute("aria-controls"));
+    if (!remainingBio) {
+      return;
+    }
+
+    remainingBio.hidden = true;
+    button.hidden = false;
+    button.addEventListener("click", function () {
+      var wasExpanded = button.getAttribute("aria-expanded") === "true";
+      remainingBio.hidden = wasExpanded;
+      button.setAttribute("aria-expanded", String(!wasExpanded));
+      button.textContent = wasExpanded ? "Full bio" : "Show less";
+    });
+  });
+
   if ("IntersectionObserver" in window) {
     var sectionLinks = new Map();
     internalNavLinks.forEach(function (link) {

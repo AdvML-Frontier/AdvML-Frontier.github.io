@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Raleway:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261017-review">
     <script>document.documentElement.classList.add('js');</script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=20261017-bio" defer></script>
     <script src="/js/events.js" defer></script>
   </head>
 
@@ -116,7 +116,7 @@
                     <section><h4>Format</h4><p>Use the IEEE template specified by <a href="https://satml.org/call-for-papers/">SaTML's call for papers</a>. References and supplementary material do not count toward the 6- or 4-page limits. The submission site will be announced in the near future.</p></section>
                     <section><h4>Review and publication</h4><p>Submissions do not need to be anonymized. Accepted papers are non-archival and will not appear in formal conference proceedings. In-progress, concurrent, and archived submissions are allowed; authors are responsible for compliance with other venues' policies.</p></section>
                     <section><h4>Presentation</h4><p>Each accepted paper will receive either a contributed spotlight talk or a poster presentation. The program deliberately reserves substantial time for an extended poster session and interactive discussion.</p></section>
-                    <section><h4>SaTML policies</h4><p>All submissions must comply with the AI Guidelines, Open Science, and Proactive Prevention of Harm policies listed in <a href="https://satml.org/call-for-papers/">SaTML's call for papers</a>.</p></section>
+                    <section><h4>SaTML policies</h4><p>Submissions must follow the applicable LLM usage and Open Science requirements in <a href="https://satml.org/call-for-papers/">SaTML's call for papers</a>. Authors should also consider its guidance on ethical considerations.</p></section>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,48 @@
         <div class="container">
           <div class="section-header">
             <h2 id="speakers-title">Keynote Speakers</h2>
-            <p>To be announced.</p>
+          </div>
+          <div class="speaker-list">
+            <article class="keynote-feature" aria-labelledby="katharina-krombholz">
+              <div class="keynote-media">
+                <div class="keynote-photo-frame">
+                  <img class="keynote-photo keynote-photo--katharina" src="assets/images/keynotes/katharina-krombholz.jpg" alt="Katharina Krombholz" width="600" height="600" loading="lazy">
+                </div>
+              </div>
+              <div class="keynote-copy">
+                <h3 id="katharina-krombholz">Katharina Krombholz</h3>
+                <p class="keynote-role">Tenured Faculty Member · CISPA</p>
+                <div class="keynote-bio">
+                  <p>Dr. Katharina Krombholz is tenured Faculty at CISPA and head of the Usable Security Group, Empirical and Behavioral Security Research Area. Before that, she was senior researcher at SBA Research. She completed her PhD in November 2016 with distinction. She also received a master’s degree in Media Informatics from TU Wien in 2012.</p>
+                </div>
+                <div class="keynote-talk">
+                  <p>Talk title and abstract to be announced.</p>
+                </div>
+              </div>
+            </article>
+            <article class="keynote-feature keynote-feature-reverse" aria-labelledby="ram-shankar-siva-kumar">
+              <div class="keynote-media">
+                <div class="keynote-photo-frame">
+                  <img class="keynote-photo keynote-photo--ram" src="assets/images/keynotes/ram-shankar-siva-kumar.webp" alt="Ram Shankar Siva Kumar" width="2500" height="3750" loading="lazy">
+                </div>
+              </div>
+              <div class="keynote-copy">
+                <h3 id="ram-shankar-siva-kumar">Ram Shankar Siva Kumar</h3>
+                <p class="keynote-role">Data Cowboy · Microsoft</p>
+                <div class="keynote-bio">
+                  <p>Ram Shankar Siva Kumar is a Data Cowboy working on the intersection of machine learning and security. At Microsoft, he founded the AI Red Team, bringing together an interdisciplinary group of researchers and engineers to proactively attack AI systems and defend from attacks.</p>
+                  <div id="ram-bio-more" class="keynote-bio-more">
+                    <p>His recent book on attacking AI systems, NOT WITH A BUG has been called “Essential Reading” by Microsoft’s Chief Technology Officer and received wide praise from industry leaders at DeepMind, OpenAI as well as policy makers and academia. He is donating his proceeds of the book royalty to Black In AI.</p>
+                    <p>His work on AI and Security has appeared in industry conferences like RSA, BlackHat, Defcon, BlueHat, DerbyCon, MIRCon, Infiltrate, academic workshops at NeurIPS, ICLR, ICML, IEEE S&amp;P, ACM - CCS. His work has been covered by Bloomberg, VentureBeat, Wired, and Geekwire. He founded the Adversarial ML Threat Matrix, an ATT&amp;CK style framework enumerating threats to machine learning. His work on adversarial machine learning appeared notably in the National Security Commission on Artificial Intelligence (NSCAI) Final report presented to the United States Congress and the President.</p>
+                    <p>He is currently Tech Policy Fellow at UC Berkeley and an affiliate at the Berkman Klein Center for Internet and Society at Harvard University, where he is broadly investigating two questions: How do we assess the safety of ML systems? What are the policy and legal ramifications of AI, in the context of security? He is also Technical Advisory Board Member at the University of Washington.</p>
+                  </div>
+                  <button class="keynote-bio-toggle" type="button" aria-expanded="false" aria-controls="ram-bio-more" hidden>Full bio</button>
+                </div>
+                <div class="keynote-talk">
+                  <p>Talk title and abstract to be announced.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -227,13 +268,13 @@
           <div class="section-header"><h2 id="organizers-title">Organizers</h2></div>
           <div class="organizer-grid">
             <article class="organizer-entry"><span class="organizer-photo organizer-photo--pin-yu"><img src="assets/images/organizers/pin-yu-chen.jpg" alt="Pin-Yu Chen" width="600" height="600" loading="lazy"></span><div><h3><a href="https://sites.google.com/site/pinyuchenpage">Pin-Yu Chen</a></h3><p>IBM Research</p></div></article>
-            <article class="organizer-entry"><img src="assets/images/organizers/kathrin-grosse.jpeg" alt="Kathrin Grosse" width="231" height="231" loading="lazy"><div><h3><a href="https://scholar.google.de/citations?user=LrYcIxYAAAAJ&amp;hl=en">Kathrin Grosse</a></h3><p>Independent Researcher</p></div></article>
+            <article class="organizer-entry"><span class="organizer-photo organizer-photo--kathrin"><img src="assets/images/organizers/kathrin-grosse.jpeg" alt="Kathrin Grosse" width="231" height="231" loading="lazy"></span><div><h3><a href="https://scholar.google.de/citations?user=LrYcIxYAAAAJ&amp;hl=en">Kathrin Grosse</a></h3><p>Independent Researcher</p></div></article>
             <article class="organizer-entry"><img src="assets/images/organizers/sanmi-koyejo.jpeg" alt="Sanmi Koyejo" width="163" height="163" loading="lazy"><div><h3><a href="https://cs.stanford.edu/~sanmi/">Sanmi Koyejo</a></h3><p>Stanford University</p></div></article>
             <article class="organizer-entry"><img src="assets/images/organizers/sijia-liu.jpeg" alt="Sijia Liu" width="256" height="256" loading="lazy"><div><h3><a href="https://lsjxjtu.github.io/index.html">Sijia Liu</a></h3><p>Michigan State University</p></div></article>
             <article class="organizer-entry"><img src="assets/images/organizers/jaron-mink.jpg" alt="Jaron Mink" width="556" height="600" loading="lazy"><div><h3><a href="https://jaronm.ink/">Jaron Mink</a></h3><p>Arizona State University</p></div></article>
             <article class="organizer-entry"><span class="organizer-photo organizer-photo--yao"><img src="assets/images/organizers/yao-qin.jpg" alt="Yao Qin" width="256" height="256" loading="lazy"></span><div><h3><a href="https://yaoqin1.github.io/">Yao Qin</a></h3><p>UC Santa Barbara</p></div></article>
             <article class="organizer-entry"><span class="organizer-photo organizer-photo--lea"><img src="assets/images/organizers/lea-schoenherr.jpg" alt="Lea Schönherr" width="974" height="1145" loading="lazy"></span><div><h3><a href="https://leaschoenherr.me/">Lea Schönherr</a></h3><p>CISPA</p></div></article>
-            <article class="organizer-entry"><img src="assets/images/organizers/eric-wong.png" alt="Eric Wong" width="200" height="200" loading="lazy"><div><h3><a href="https://riceric22.github.io/">Eric Wong</a></h3><p>University of Pennsylvania</p></div></article>
+            <article class="organizer-entry"><span class="organizer-photo organizer-photo--eric"><img src="assets/images/organizers/eric-wong.png" alt="Eric Wong" width="200" height="200" loading="lazy"></span><div><h3><a href="https://riceric22.github.io/">Eric Wong</a></h3><p>University of Pennsylvania</p></div></article>
             <article class="organizer-entry"><img src="assets/images/organizers/dongxiao-zhu.jpeg" alt="Dongxiao Zhu" width="483" height="483" loading="lazy"><div><h3><a href="https://dongxiaozhu.github.io/">Dongxiao Zhu</a></h3><p>Wayne State University</p></div></article>
           </div>
         </div>

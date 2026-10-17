@@ -580,7 +580,7 @@ main > section {
   grid-template-columns: 270px minmax(0, 1fr);
   gap: 3rem;
   padding: 0.25rem 0 2.25rem;
-  align-items: center;
+  align-items: start;
 }
 
 .keynote-feature + .keynote-feature {
@@ -642,6 +642,17 @@ main > section {
   object-fit: cover;
 }
 
+.keynote-photo--katharina {
+  transform: scale(1.05);
+  transform-origin: 50% 30%;
+}
+
+.keynote-photo--ram {
+  object-position: center 25%;
+  transform: scale(1.18);
+  transform-origin: 50% 30%;
+}
+
 .keynote-copy h3 {
   margin-bottom: 0.25rem;
   font-size: clamp(1.65rem, 3vw, 2.2rem);
@@ -654,11 +665,30 @@ main > section {
   font-weight: 700;
 }
 
-.keynote-copy > p:not(.keynote-role) {
-  margin-bottom: 0;
+.keynote-bio {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.keynote-bio p {
+  margin: 0;
+}
+
+.keynote-bio-more p {
+  margin-top: 0.9rem;
+}
+
+.keynote-bio-toggle {
+  margin-top: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
+.keynote-bio-toggle[hidden] {
+  display: none;
 }
 
 .keynote-talk {
@@ -744,8 +774,18 @@ main > section {
 }
 
 .organizer-photo--pin-yu img {
-  transform: translateY(-3px) scale(1.14);
+  transform: translateY(-5%) scale(1.14);
   transform-origin: 50% 38%;
+}
+
+.organizer-photo--kathrin img {
+  transform: scale(1.08);
+  transform-origin: 50% 100%;
+}
+
+.organizer-photo--eric img {
+  transform: scale(1.06);
+  transform-origin: 50% 100%;
 }
 
 .organizer-photo--yao img {
@@ -865,7 +905,8 @@ main > section {
   margin-top: 0.15rem;
 }
 
-.schedule-details summary {
+.schedule-details summary,
+.keynote-bio-toggle {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
@@ -883,7 +924,8 @@ main > section {
   display: none;
 }
 
-.schedule-details summary::before {
+.schedule-details summary::before,
+.keynote-bio-toggle::before {
   width: 0.48rem;
   height: 0.48rem;
   border-right: 2px solid currentColor;
@@ -895,6 +937,10 @@ main > section {
 
 .schedule-details[open] summary::before {
   transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.keynote-bio-toggle[aria-expanded="true"]::before {
+  transform: rotate(-135deg);
 }
 
 .schedule-details > div {
@@ -1055,11 +1101,13 @@ main > section {
     background: rgba(8, 29, 43, 0.98);
     box-shadow: -20px 0 40px rgba(8, 29, 43, 0.32);
     overflow-y: auto;
+    visibility: hidden;
     transform: translateX(105%);
-    transition: transform 180ms ease;
+    transition: transform 180ms ease, visibility 180ms;
   }
 
   .js body.nav-open #nav-menu-container {
+    visibility: visible;
     transform: translateX(0);
   }
 
