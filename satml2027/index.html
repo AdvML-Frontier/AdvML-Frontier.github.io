@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script>document.documentElement.classList.add('js');</script>
     <script src="js/main.js" defer></script>
+    <script src="/js/events.js" defer></script>
   </head>
 
   <body>
@@ -36,16 +37,8 @@
             <li><a class="nav-link scrollto" href="#speakers">Keynotes</a></li>
             <li><a class="nav-link scrollto" href="#schedule">Program</a></li>
             <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
-            <li class="past-events-item">
-              <details class="past-events-menu">
-                <summary>Past Events</summary>
-                <ul>
-                  <li><a href="../past/colm2026/">AdvML-Frontiers '25</a></li>
-                  <li><a href="../past/neurips2024/">AdvML-Frontiers '24</a></li>
-                  <li><a href="../past/icml2023/">AdvML-Frontiers '23</a></li>
-                  <li><a href="../past/icml2022/">AdvML-Frontiers '22</a></li>
-                </ul>
-              </details>
+            <li class="past-events-item" data-events-menu="details">
+              <a href="/satml2027/">All Events</a>
             </li>
           </ul>
         </nav>
