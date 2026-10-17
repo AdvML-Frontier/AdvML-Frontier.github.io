@@ -6,7 +6,7 @@
   var label = "All Events";
   var events = [
     { name: "AdvML-Frontiers '27", url: "/satml2027/" },
-    { name: "AdvML-Frontiers '25", url: "/past/colm2026/" },
+    { name: "AdvML-Frontiers '26", url: "/past/colm2026/" },
     { name: "AdvML-Frontiers '24", url: "/past/neurips2024/" },
     { name: "AdvML-Frontiers '23", url: "/past/icml2023/" },
     { name: "AdvML-Frontiers '22", url: "/past/icml2022/" }
