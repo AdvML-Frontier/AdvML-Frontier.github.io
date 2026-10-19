@@ -505,11 +505,59 @@ main > section {
   font-size: 0.85rem;
 }
 
-.submission-note {
-  margin: 0.8rem 0;
-  color: var(--muted);
+.submission-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem 1rem;
+  margin: 0.3rem 0 1.5rem;
+}
+
+.submission-cta p {
+  margin: 0;
   font-size: 0.9rem;
-  font-style: italic;
+}
+
+.submission-cta strong,
+.submission-cta span {
+  display: block;
+}
+
+.submission-cta strong {
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.submission-cta-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid var(--pink-dark);
+  border-radius: 0;
+  background: var(--pink-dark);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.submission-cta-button:hover,
+.submission-cta-button:focus-visible {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+}
+
+.submission-account-note {
+  margin: -0.4rem 0 1.5rem;
+  color: var(--pink-dark);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .cfp-tracks {
@@ -581,8 +629,9 @@ main > section {
 }
 
 .keynote-feature {
+  --keynote-photo-size: 270px;
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
+  grid-template-columns: var(--keynote-photo-size) minmax(0, 1fr);
   gap: 3rem;
   padding: 0.25rem 0 2.25rem;
   align-items: start;
@@ -598,7 +647,7 @@ main > section {
 }
 
 .keynote-feature-reverse {
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr) var(--keynote-photo-size);
 }
 
 .keynote-feature-reverse .keynote-media {
@@ -611,7 +660,7 @@ main > section {
 
 .keynote-media {
   position: relative;
-  width: 100%;
+  width: min(100%, var(--keynote-photo-size));
   aspect-ratio: 1;
   border-radius: 0.4rem;
   background: var(--surface-soft);
@@ -1026,11 +1075,25 @@ main > section {
   font-size: 1rem;
 }
 
+.policy-grid .submission-format {
+  grid-column: 1 / -1;
+}
+
 .policy-grid p {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.policy-grid p + p {
+  margin-top: 0.65rem;
+}
+
+.policy-grid code {
+  color: var(--ink);
+  font-size: 0.95em;
+  overflow-wrap: anywhere;
 }
 
 /* Footer */
@@ -1165,7 +1228,7 @@ main > section {
 
   .keynote-feature,
   .keynote-feature-reverse {
-    grid-template-columns: 220px minmax(0, 1fr);
+    --keynote-photo-size: 220px;
     gap: 2rem;
   }
 
@@ -1268,17 +1331,14 @@ main > section {
 
   .keynote-feature,
   .keynote-feature-reverse {
-    grid-template-columns: 1fr;
+    --keynote-photo-size: 250px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
 
   .keynote-feature-reverse .keynote-media,
   .keynote-feature-reverse .keynote-copy {
     order: initial;
-  }
-
-  .keynote-media {
-    width: min(100%, 250px);
   }
 
   .organizer-grid {
