@@ -37,6 +37,11 @@
   <link href="../../css/style.css" rel="stylesheet">
 
   <script src="/js/events.js" defer></script>
+  <style>
+    #gallery { padding: 60px 0; }
+    #gallery .venue-gallery a { display: block; aspect-ratio: 4 / 3; }
+    #gallery .venue-gallery img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
 </head>
 
 <body style="margin: 0; padding: 0;">
@@ -66,7 +71,7 @@
 		      <!-- <li><a class="nav-link scrollto" href="#twitter">Twitter</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#venue">Venue</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
           <li class="dropdown menu-has-children" data-events-menu>
             <a href="/satml2027/">All Events</a>
@@ -658,6 +663,93 @@
 
 
 <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Moments from AdvML-Frontiers &times; CoTMA @ COLM 2026. If you do not want your photo presented here, please <a href="#organizers">contact us</a>.</p>
+        </div>
+      </div>
+      <div class="container venue-gallery-container">
+        <div class="row no-gutters">
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/1.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/1.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 1" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/2.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/2.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 2" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/3.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/3.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 3" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/4.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/4.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 4" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/5.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/5.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 5" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/6.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/6.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 6" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/7.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/7.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 7" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/8.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/8.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 8" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="venue-gallery">
+              <a href="img/gallery/9.jpg" class="glightbox" data-gallery="colm2026-gallery">
+                <img src="img/gallery/9.jpg" alt="AdvML-Frontiers &times; CoTMA @ COLM 2026 workshop photo 9" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--==========================
       Organizers Section
     ============================-->
     <section id="organizers" class="section-with-bg">
@@ -992,6 +1084,7 @@
   <!-- <script src="../../vendor/aos/aos.js"></script> -->
   <!-- <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <script src="../../vendor/glightbox/js/glightbox.min.js"></script>
+  <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="../../vendor/swiper/swiper-bundle.min.js"></script>
   <!-- <script src="../../vendor/php-email-form/validate.js"></script> -->
 
