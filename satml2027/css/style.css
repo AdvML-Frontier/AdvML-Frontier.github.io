@@ -407,14 +407,14 @@ main > section {
 /* Workshop note and call for papers */
 .workshop-note {
   max-width: var(--content-width);
-  margin: 1.75rem 0 0;
+  margin: 1rem 0 0;
   color: var(--ink);
   font-size: 1.02rem;
   line-height: 1.65;
 }
 
 .dates-overview {
-  padding: 1.5rem 0 0.75rem;
+  padding: 0.75rem 0;
 }
 
 .dates-overview .important-dates {
@@ -427,7 +427,7 @@ main > section {
 }
 
 .quick-cfp-card {
-  max-width: var(--content-width);
+  max-width: 88ch;
 }
 
 .quick-cfp-copy {
@@ -440,7 +440,7 @@ main > section {
 
 .quick-cfp-copy p {
   margin-bottom: 0;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 1.03rem;
 }
 
@@ -500,21 +500,86 @@ main > section {
   font-weight: 800;
 }
 
-.submission-note {
-  margin: 0.8rem 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-style: italic;
+.deadline-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.85rem;
 }
 
-.cfp-tracks {
-  margin: 1.35rem 0 1.1rem;
+.submission-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem 1rem;
+  margin: 0.3rem 0 1.5rem;
+}
+
+.submission-cta p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.submission-cta strong,
+.submission-cta span {
+  display: block;
+}
+
+.submission-cta strong {
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.submission-cta-button {
+  display: inline-flex;
+  flex-shrink: 0;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--pink-dark);
+  border-radius: 3px;
+  background: var(--pink-dark);
+  box-shadow: 0 2px 5px rgba(22, 56, 75, 0.14);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.submission-cta-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.submission-cta-button:hover,
+.submission-cta-button:focus-visible {
+  border-color: var(--navy);
+  background: var(--navy);
+  box-shadow: 0 3px 7px rgba(22, 56, 75, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+.submission-account-note {
+  margin: -0.4rem 0 1.5rem;
+  color: var(--pink-dark);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .cfp-policy-summary {
   margin: 0 0 0.8rem;
-  color: var(--muted);
-  font-size: 0.94rem;
+  color: var(--ink);
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -528,10 +593,10 @@ main > section {
 
 .cfp-expander summary {
   display: flex;
-  min-height: 52px;
+  min-height: 48px;
   align-items: center;
   gap: 0.7rem;
-  padding: 0.8rem 0;
+  padding: 0.65rem 0;
   color: var(--navy);
   cursor: pointer;
   font-weight: 700;
@@ -556,17 +621,8 @@ main > section {
   transform: rotate(45deg) translate(-2px, -2px);
 }
 
-.summary-open,
-.cfp-expander[open] .summary-closed {
-  display: none;
-}
-
-.cfp-expander[open] .summary-open {
-  display: inline;
-}
-
 .cfp-expander-content {
-  padding: 0.5rem 0 1.8rem 1.35rem;
+  padding: 0.75rem 0 1.25rem;
 }
 
 /* Speaker and organizer profiles */
@@ -576,11 +632,12 @@ main > section {
 }
 
 .keynote-feature {
+  --keynote-photo-size: 270px;
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
+  grid-template-columns: var(--keynote-photo-size) minmax(0, 1fr);
   gap: 3rem;
   padding: 0.25rem 0 2.25rem;
-  align-items: center;
+  align-items: start;
 }
 
 .keynote-feature + .keynote-feature {
@@ -593,7 +650,7 @@ main > section {
 }
 
 .keynote-feature-reverse {
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr) var(--keynote-photo-size);
 }
 
 .keynote-feature-reverse .keynote-media {
@@ -606,7 +663,7 @@ main > section {
 
 .keynote-media {
   position: relative;
-  width: 100%;
+  width: min(100%, var(--keynote-photo-size));
   aspect-ratio: 1;
   border-radius: 0.4rem;
   background: var(--surface-soft);
@@ -642,6 +699,17 @@ main > section {
   object-fit: cover;
 }
 
+.keynote-photo--katharina {
+  transform: scale(1.05);
+  transform-origin: 50% 30%;
+}
+
+.keynote-photo--ram {
+  object-position: center 25%;
+  transform: scale(1.18);
+  transform-origin: 50% 30%;
+}
+
 .keynote-copy h3 {
   margin-bottom: 0.25rem;
   font-size: clamp(1.65rem, 3vw, 2.2rem);
@@ -654,11 +722,30 @@ main > section {
   font-weight: 700;
 }
 
-.keynote-copy > p:not(.keynote-role) {
-  margin-bottom: 0;
+.keynote-bio {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.keynote-bio p {
+  margin: 0;
+}
+
+.keynote-bio-more p {
+  margin-top: 0.9rem;
+}
+
+.keynote-bio-toggle {
+  margin-top: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
+.keynote-bio-toggle[hidden] {
+  display: none;
 }
 
 .keynote-talk {
@@ -744,8 +831,18 @@ main > section {
 }
 
 .organizer-photo--pin-yu img {
-  transform: translateY(-3px) scale(1.14);
+  transform: translateY(-5%) scale(1.14);
   transform-origin: 50% 38%;
+}
+
+.organizer-photo--kathrin img {
+  transform: scale(1.08);
+  transform-origin: 50% 100%;
+}
+
+.organizer-photo--eric img {
+  transform: scale(1.06);
+  transform-origin: 50% 100%;
 }
 
 .organizer-photo--yao img {
@@ -865,7 +962,8 @@ main > section {
   margin-top: 0.15rem;
 }
 
-.schedule-details summary {
+.schedule-details summary,
+.keynote-bio-toggle {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
@@ -883,7 +981,8 @@ main > section {
   display: none;
 }
 
-.schedule-details summary::before {
+.schedule-details summary::before,
+.keynote-bio-toggle::before {
   width: 0.48rem;
   height: 0.48rem;
   border-right: 2px solid currentColor;
@@ -897,6 +996,10 @@ main > section {
   transform: rotate(45deg) translate(-1px, -1px);
 }
 
+.keynote-bio-toggle[aria-expanded="true"]::before {
+  transform: rotate(-135deg);
+}
+
 .schedule-details > div {
   max-width: 650px;
   padding: 0.25rem 0 0.05rem 0.85rem;
@@ -908,46 +1011,81 @@ main > section {
 }
 
 /* Expanded CFP */
-.cfp-main > h3 {
-  margin: 1.8rem 0 0.65rem;
-  font-size: 1.25rem;
-}
-
-.cfp-main > h3:first-child {
-  margin-top: 0;
-}
-
-.submission-tracks {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.3rem 0 2rem;
-}
-
-.submission-tracks article {
-  padding: 0.1rem 1rem 0.1rem 0;
-}
-
-.submission-tracks span {
-  display: inline-flex;
-  margin-bottom: 0.35rem;
-  color: var(--pink-dark);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.submission-tracks h4 {
-  margin-bottom: 0.4rem;
+.cfp-main {
+  color: var(--ink);
   font-size: 1rem;
+  line-height: 1.65;
 }
 
-.submission-tracks p {
+.cfp-main > h3 {
+  margin: 1.8rem 0 0.85rem;
+  color: var(--pink-dark);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.cfp-policy-adoption {
+  margin: 1.8rem 0 0;
+}
+
+.cfp-contents {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+
+.cfp-contents p {
+  margin: 0 0 0.4rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.cfp-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.35rem;
   margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.55;
+  padding: 0;
+  list-style: none;
+}
+
+.cfp-category-list,
+.cfp-policy-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.cfp-category-list > li + li,
+.cfp-policy-list > li + li {
+  margin-top: 1rem;
+}
+
+.cfp-category-list > li > strong:first-child,
+.cfp-policy-list > li > strong:first-child,
+.cfp-policy-list > li > p > strong:first-child {
+  color: var(--navy);
+}
+
+.cfp-policy-list p {
+  margin: 0;
+}
+
+.cfp-policy-list ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.cfp-policy-list ul > li + li {
+  margin-top: 0.4rem;
+}
+
+.cfp-main code {
+  color: var(--ink);
+  font-size: 0.95em;
+  overflow-wrap: anywhere;
 }
 
 .topic-list {
@@ -963,23 +1101,21 @@ main > section {
   margin-top: 0.7rem;
 }
 
-.policy-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem 2.5rem;
-  padding-top: 0.2rem;
+.cfp-guidance-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
 }
 
-.policy-grid h4 {
-  margin-bottom: 0.3rem;
-  font-size: 1rem;
+.cfp-guidance-list li + li {
+  margin-top: 0.3rem;
 }
 
-.policy-grid p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+.cfp-contact {
+  margin: 1.5rem 0 0;
+}
+
+.cfp-contact a {
+  overflow-wrap: anywhere;
 }
 
 /* Footer */
@@ -1005,11 +1141,10 @@ main > section {
   grid-column: 2;
   grid-row: 1;
   min-width: 190px;
-  text-align: left;
+  text-align: right;
 }
 
 .footer-layout strong,
-.footer-layout span,
 .footer-layout a {
   display: block;
 }
@@ -1020,23 +1155,21 @@ main > section {
   font-size: 1.1rem;
 }
 
-.footer-contact span {
-  margin-bottom: 0.3rem;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .footer-layout p {
   margin: 0;
 }
 
 .footer-layout a {
   color: var(--accent-soft);
-  font-weight: 700;
+  font-weight: 400;
+  overflow-wrap: anywhere;
   text-underline-offset: 0.2em;
+}
+
+.footer-layout .footer-policy {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* Responsive navigation and layouts */
@@ -1055,11 +1188,13 @@ main > section {
     background: rgba(8, 29, 43, 0.98);
     box-shadow: -20px 0 40px rgba(8, 29, 43, 0.32);
     overflow-y: auto;
+    visibility: hidden;
     transform: translateX(105%);
-    transition: transform 180ms ease;
+    transition: transform 180ms ease, visibility 180ms;
   }
 
   .js body.nav-open #nav-menu-container {
+    visibility: visible;
     transform: translateX(0);
   }
 
@@ -1115,7 +1250,7 @@ main > section {
 
   .keynote-feature,
   .keynote-feature-reverse {
-    grid-template-columns: 220px minmax(0, 1fr);
+    --keynote-photo-size: 220px;
     gap: 2rem;
   }
 
@@ -1205,12 +1340,6 @@ main > section {
     padding-left: 0;
   }
 
-  .submission-tracks,
-  .policy-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .cfp-expander-content {
     padding-right: 0;
     padding-left: 0;
@@ -1218,17 +1347,14 @@ main > section {
 
   .keynote-feature,
   .keynote-feature-reverse {
-    grid-template-columns: 1fr;
+    --keynote-photo-size: 250px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
 
   .keynote-feature-reverse .keynote-media,
   .keynote-feature-reverse .keynote-copy {
     order: initial;
-  }
-
-  .keynote-media {
-    width: min(100%, 250px);
   }
 
   .organizer-grid {
@@ -1271,6 +1397,7 @@ main > section {
     grid-column: 1;
     grid-row: 1;
     min-width: 0;
+    text-align: left;
   }
 
   .footer-brand {
